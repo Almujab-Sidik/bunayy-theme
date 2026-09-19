@@ -241,8 +241,7 @@ require_once get_template_directory() . '/vendor/autoload.php';
 if (defined('BUNAYY_THEME_REPOSITORY_URL') && BUNAYY_THEME_REPOSITORY_URL) {
     $bunayy_update_checker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
         BUNAYY_THEME_REPOSITORY_URL,
-        get_template_directory(),
-        'bunayy'
+        get_template_directory()
     );
     $bunayy_update_checker->setBranch('main');
 
