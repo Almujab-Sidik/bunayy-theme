@@ -1,0 +1,551 @@
+/* Homepage
+--------------------------------------------- */
+body.home {
+	margin: 0;
+}
+
+.home-page {
+	overflow: hidden;
+	color: #303747;
+}
+
+.home-container {
+	width: min(100% - 2rem, 77.5rem);
+	margin-inline: auto;
+}
+
+.home-section {
+	padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.home-section h2 {
+	margin: 0;
+	color: var(--color-secondary);
+	font-size: clamp(2.1rem, 5vw, 3.8rem);
+	line-height: 1.08;
+}
+
+.home-section__header {
+	max-width: 48rem;
+	margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+	text-align: center;
+}
+
+.home-section__header p {
+	margin: 1rem auto 0;
+	font-size: clamp(1rem, 2vw, 1.15rem);
+	line-height: 1.75;
+}
+
+.home-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.65rem;
+	min-height: 3.25rem;
+	padding: 0.85rem 1.35rem;
+	border-radius: 999px;
+	background: var(--color-primary);
+	box-shadow: 0 0.75rem 1.75rem rgba(251, 81, 71, 0.24);
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.home-button:visited {
+	color: #fff;
+}
+
+.home-button:hover,
+.home-button:focus-visible {
+	box-shadow: 0 1rem 2rem rgba(251, 81, 71, 0.32);
+	color: #fff;
+	transform: translateY(-2px);
+}
+
+.home-button:focus-visible,
+.home-program-card a:focus-visible,
+.home-faq summary:focus-visible {
+	outline: 3px solid #ffbc42;
+	outline-offset: 3px;
+}
+
+.home-hero {
+	position: relative;
+	display: grid;
+	min-height: clamp(46rem, 190vw, 58rem);
+	isolation: isolate;
+	background: #f8f6f4;
+}
+
+.home-hero__media,
+.home-hero__media::after,
+.home-hero__media img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.home-hero__media {
+	z-index: -1;
+	margin: 0;
+}
+
+.home-hero__media::after {
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.88) 36%, rgba(255, 255, 255, 0) 59%);
+	content: "";
+}
+
+.home-hero__media img {
+	object-fit: cover;
+	object-position: center bottom;
+}
+
+.home-hero__inner {
+	display: flex;
+	align-items: flex-start;
+	padding-block: clamp(3rem, 10vw, 6rem);
+}
+
+.home-hero__content {
+	max-width: 42rem;
+}
+
+.home-hero__eyebrow {
+	margin: 0 0 1rem;
+	color: var(--color-primary);
+	font-size: 0.82rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.home-hero h1 {
+	margin: 0;
+	color: var(--color-secondary);
+	font-size: clamp(2.65rem, 11vw, 4.5rem);
+	line-height: 1.02;
+	letter-spacing: -0.035em;
+}
+
+.home-hero__description {
+	max-width: 37rem;
+	margin-block: 1.35rem 1.75rem;
+	font-size: clamp(1rem, 2.4vw, 1.15rem);
+	line-height: 1.75;
+}
+
+.home-hero__description p {
+	margin: 0;
+}
+
+.home-programs {
+	background: #fff;
+}
+
+.home-programs__grid {
+	display: grid;
+	gap: 1.25rem;
+}
+
+.home-program-card {
+	display: flex;
+	min-width: 0;
+	flex-direction: column;
+	padding: 0.75rem;
+	overflow: hidden;
+	border: 1px solid rgba(50, 108, 198, 0.12);
+	border-radius: 1.5rem;
+	background: #fff;
+	box-shadow: 0 0.85rem 2.5rem rgba(36, 65, 111, 0.1);
+	transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.home-program-card:hover {
+	box-shadow: 0 1.25rem 3rem rgba(36, 65, 111, 0.15);
+	transform: translateY(-4px);
+}
+
+.home-program-card__image {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	border-radius: 1rem;
+	object-fit: cover;
+}
+
+.home-program-card__body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	padding: 1.15rem 0.6rem 0.6rem;
+}
+
+.home-program-card h3 {
+	margin: 0 0 0.65rem;
+	color: var(--color-secondary);
+	font-size: 1.35rem;
+	line-height: 1.2;
+}
+
+.home-program-card p {
+	margin: 0 0 1.25rem;
+	font-size: 0.9rem;
+	line-height: 1.7;
+}
+
+.home-program-card__button {
+	align-self: flex-start;
+	margin-top: auto;
+	font-size: 0.9rem;
+}
+
+.home-benefits {
+	background-color: #fff0b2;
+	background-position: center;
+	background-size: cover;
+}
+
+.home-benefits__grid {
+	display: grid;
+	align-items: center;
+	gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.home-benefits__media {
+	text-align: center;
+}
+
+.home-benefits__image {
+	display: block;
+	width: min(100%, 34rem);
+	max-height: 42rem;
+	margin-inline: auto;
+	object-fit: contain;
+}
+
+.home-benefits h2 {
+	margin-bottom: 2rem;
+}
+
+.home-benefits__list {
+	display: grid;
+	gap: 1rem;
+}
+
+.home-benefits__list article {
+	padding: 1.25rem;
+	border: 1px solid rgba(255, 255, 255, 0.75);
+	border-radius: 1rem;
+	background: rgba(255, 255, 255, 0.72);
+	box-shadow: 0 0.6rem 1.6rem rgba(154, 107, 15, 0.08);
+	backdrop-filter: blur(6px);
+}
+
+.home-benefits__list h3 {
+	margin: 0 0 0.45rem;
+	color: #303747;
+	font-size: 1.15rem;
+	line-height: 1.35;
+}
+
+.home-benefits__list p {
+	margin: 0;
+	font-size: 0.92rem;
+	line-height: 1.7;
+}
+
+.home-testimonials {
+	background: #edf3ff;
+}
+
+.home-testimonials__grid {
+	display: grid;
+	gap: 1.25rem;
+}
+
+.home-testimonial-card {
+	display: flex;
+	flex-direction: column;
+	padding: clamp(1.5rem, 4vw, 2.25rem);
+	border: 1px solid rgba(50, 108, 198, 0.12);
+	border-radius: 1.25rem;
+	background: #fff;
+	box-shadow: 0 1rem 2.5rem rgba(36, 65, 111, 0.09);
+}
+
+.home-testimonial-card__rating {
+	margin: 0 0 1rem;
+	color: #ffb525;
+	font-size: 1.15rem;
+	letter-spacing: 0.12em;
+}
+
+.home-testimonial-card blockquote {
+	margin: 0 0 1.75rem;
+	font-size: clamp(1rem, 2vw, 1.1rem);
+	line-height: 1.8;
+}
+
+.home-testimonial-card__person {
+	display: flex;
+	align-items: center;
+	gap: 0.9rem;
+	margin-top: auto;
+}
+
+.home-testimonial-card__avatar {
+	width: 3.5rem;
+	height: 3.5rem;
+	flex: 0 0 auto;
+	border: 3px solid #edf3ff;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.home-testimonial-card__person strong,
+.home-testimonial-card__person span {
+	display: block;
+}
+
+.home-testimonial-card__person strong {
+	color: var(--color-secondary);
+	font-family: var(--font-heading);
+	font-size: 0.95rem;
+}
+
+.home-testimonial-card__person span {
+	margin-top: 0.2rem;
+	color: #758099;
+	font-size: 0.8rem;
+}
+
+.home-faq__grid {
+	display: grid;
+	gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.home-faq__intro > div {
+	margin-top: 1.25rem;
+	line-height: 1.75;
+}
+
+.home-faq__intro p {
+	margin: 0;
+}
+
+.home-faq__items {
+	border-top: 1px solid #dce3ef;
+}
+
+.home-faq details {
+	border-bottom: 1px solid #dce3ef;
+}
+
+.home-faq summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding-block: 1.25rem;
+	color: #303747;
+	font-family: var(--font-heading);
+	font-size: clamp(1rem, 2vw, 1.15rem);
+	font-weight: 700;
+	line-height: 1.4;
+	cursor: pointer;
+	list-style: none;
+}
+
+.home-faq summary::-webkit-details-marker {
+	display: none;
+}
+
+.home-faq summary span {
+	position: relative;
+	width: 1.4rem;
+	height: 1.4rem;
+	flex: 0 0 auto;
+	border-radius: 50%;
+	background: rgba(50, 108, 198, 0.1);
+}
+
+.home-faq summary span::before,
+.home-faq summary span::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0.65rem;
+	height: 2px;
+	background: var(--color-secondary);
+	content: "";
+	transform: translate(-50%, -50%);
+}
+
+.home-faq summary span::after {
+	transform: translate(-50%, -50%) rotate(90deg);
+	transition: transform 180ms ease;
+}
+
+.home-faq details[open] summary {
+	color: var(--color-secondary);
+}
+
+.home-faq details[open] summary span::after {
+	transform: translate(-50%, -50%) rotate(0);
+}
+
+.home-faq__answer {
+	padding: 0 2.5rem 1.35rem 0;
+	font-size: 0.94rem;
+	line-height: 1.75;
+}
+
+.home-faq__answer p {
+	margin: 0;
+}
+
+.home-cta {
+	padding-top: 0;
+}
+
+.home-cta__box {
+	padding: clamp(3rem, 7vw, 5.5rem) clamp(1.5rem, 7vw, 6rem);
+	border-radius: clamp(1.25rem, 3vw, 2rem);
+	background-color: var(--color-secondary);
+	background-position: center;
+	background-size: cover;
+	box-shadow: 0 1.25rem 3rem rgba(36, 65, 111, 0.2);
+	color: var(--color-text);
+	text-align: center;
+}
+
+.home-cta h2 {
+	max-width: 55rem;
+	margin-inline: auto;
+	color: var(--color-secondary);
+}
+
+.home-cta p {
+	max-width: 44rem;
+	margin: 1.25rem auto 1.75rem;
+	font-size: clamp(1rem, 2vw, 1.12rem);
+	line-height: 1.75;
+}
+
+.home-button--light {
+	background: var(--color-primary);
+	box-shadow: 0 0.75rem 1.75rem rgba(20, 49, 96, 0.2);
+	color: white;
+}
+
+.home-button--light:visited,
+.home-button--light:hover,
+.home-button--light:focus-visible {
+  color: white;
+}
+
+body.home .site-footer {
+	margin-top: 0;
+}
+
+@media screen and (min-width: 40em) {
+
+	.home-container {
+		width: min(100% - 4rem, 77.5rem);
+	}
+
+	.home-programs__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 48em) {
+
+	.home-hero {
+		min-height: clamp(42rem, 66.667vw, 55rem);
+	}
+
+	.home-hero__media::after {
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.93) 35%, rgba(255, 255, 255, 0.35) 55%, rgba(255, 255, 255, 0) 72%);
+	}
+
+	.home-hero__inner {
+		align-items: center;
+	}
+
+	.home-hero__content {
+		width: 55%;
+	}
+
+	.home-testimonials__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (min-width: 56em) {
+
+	.home-benefits__grid {
+		grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+	}
+}
+
+@media screen and (min-width: 64em) {
+
+	.home-programs__grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.home-program-card:first-child {
+		grid-row: 1;
+		grid-column: 1 / span 2;
+	}
+
+	.home-program-card:first-child .home-program-card__image {
+		aspect-ratio: 16 / 7;
+	}
+
+	.home-program-card:first-child .home-program-card__body {
+		padding: 1.25rem 0.6rem 0.6rem;
+	}
+
+	.home-program-card:nth-child(2) {
+		grid-row: 2;
+		grid-column: 1;
+	}
+
+	.home-program-card:nth-child(3) {
+		grid-row: 2;
+		grid-column: 2;
+	}
+
+	.home-program-card:nth-child(4) {
+		grid-row: 2;
+		grid-column: 3;
+	}
+
+	.home-program-card:nth-child(5) {
+		grid-row: 1;
+		grid-column: 3;
+	}
+
+	.home-faq__grid {
+		grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+		align-items: start;
+	}
+
+	.home-faq__intro {
+		position: sticky;
+		top: 2rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.home-button,
+	.home-program-card,
+	.home-faq summary span::after {
+		transition: none;
+	}
+}

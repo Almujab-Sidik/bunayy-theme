@@ -1,0 +1,533 @@
+/* Themed Playdate */
+.playdate-page {
+	--playdate-green: #267b68;
+	--playdate-yellow: #ffbc42;
+	--playdate-cream: #fff8e5;
+	--playdate-blue-soft: #eef5ff;
+	overflow: hidden;
+	color: #252b36;
+}
+
+.playdate-container {
+	width: min(100% - 2rem, 77.5rem);
+	margin-inline: auto;
+}
+
+.playdate-section {
+	padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.playdate-page h1,
+.playdate-page h2,
+.playdate-page h3,
+.playdate-page p {
+	margin-top: 0;
+}
+
+.playdate-page h2 {
+	margin-bottom: 1rem;
+	color: var(--color-secondary);
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	line-height: 1.08;
+	letter-spacing: -0.025em;
+}
+
+.playdate-richtext {
+	line-height: 1.75;
+}
+
+.playdate-richtext .block,
+.playdate-richtext .block-layout,
+.playdate-richtext .layout-element,
+.playdate-richtext .text-box {
+	display: contents;
+}
+
+.playdate-richtext p:last-child,
+.playdate-richtext ul:last-child {
+	margin-bottom: 0;
+}
+
+.playdate-richtext ul {
+	padding-left: 1.25rem;
+}
+
+.playdate-copy {
+	max-width: 54rem;
+}
+
+.playdate-copy--center {
+	margin-inline: auto;
+	text-align: center;
+}
+
+.playdate-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	padding: 0.9rem 1.35rem;
+	border-radius: 999px;
+	background: var(--color-primary);
+	box-shadow: 0 0.75rem 1.75rem rgba(251, 81, 71, 0.24);
+	color: #fff;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	line-height: 1.25;
+	text-align: center;
+	text-decoration: none;
+	transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.playdate-button:hover {
+	transform: translateY(-2px);
+	color: #fff;
+}
+
+.playdate-button:focus-visible {
+	outline: 3px solid var(--playdate-yellow);
+	outline-offset: 4px;
+}
+
+/* Hero */
+.playdate-hero {
+	position: relative;
+	display: grid;
+	min-height: clamp(35rem, 65vw, 48rem);
+	place-items: center;
+	isolation: isolate;
+	overflow: hidden;
+	background: #17312b;
+	color: #fff;
+	text-align: center;
+}
+
+.playdate-hero::after {
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(10, 24, 22, 0.48), rgba(10, 24, 22, 0.78));
+	content: "";
+}
+
+.playdate-hero__background,
+.playdate-pricing__background,
+.playdate-programs__background {
+	position: absolute;
+	z-index: -2;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.playdate-hero__content {
+	padding-block: clamp(4rem, 10vw, 8rem);
+}
+
+.playdate-hero__logo {
+	display: block;
+	width: clamp(8rem, 17vw, 12rem);
+	height: auto;
+	margin: 0 auto 1.25rem;
+}
+
+.playdate-hero h1 {
+	max-width: 70rem;
+	margin: 0 auto;
+	color: var(--playdate-yellow);
+	font-size: clamp(2.5rem, 7vw, 5rem);
+	line-height: 1.02;
+	letter-spacing: -0.035em;
+}
+
+.playdate-hero__description {
+	max-width: 58rem;
+	margin: 1.25rem auto 1.75rem;
+	font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+/* About and theme gallery */
+.playdate-about {
+	background: #fff;
+}
+
+.playdate-sharing {
+	background: var(--playdate-blue-soft);
+}
+
+.playdate-theme-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	margin-top: clamp(2rem, 5vw, 3.25rem);
+}
+
+.playdate-theme-card {
+	position: relative;
+	overflow: hidden;
+	min-height: 12rem;
+	border-radius: 1.25rem;
+	background: var(--playdate-green);
+	box-shadow: 0 1rem 2.5rem rgba(38, 123, 104, 0.12);
+}
+
+.playdate-theme-card__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 4 / 5;
+	object-fit: cover;
+	transition: transform 220ms ease;
+}
+
+.playdate-theme-card:hover .playdate-theme-card__image {
+	transform: scale(1.03);
+}
+
+.playdate-theme-card h3 {
+	position: absolute;
+	right: 0.75rem;
+	bottom: 0.75rem;
+	left: 0.75rem;
+	margin: 0;
+	padding: 0.7rem 0.8rem;
+	border-radius: 0.8rem;
+	background: rgba(255, 255, 255, 0.94);
+	color: var(--color-secondary);
+	font-size: clamp(0.88rem, 2.4vw, 1.05rem);
+	text-align: center;
+}
+
+/* Benefits */
+.playdate-benefits {
+	background: #fff;
+}
+
+.playdate-benefits__layout {
+	display: grid;
+	gap: clamp(2rem, 6vw, 5rem);
+	align-items: center;
+}
+
+.playdate-benefits__image {
+	display: block;
+	width: 100%;
+	max-height: 42rem;
+	object-fit: cover;
+	border-radius: 45% 45% 1.5rem 1.5rem;
+	box-shadow: 0 1.5rem 3.5rem rgba(38, 123, 104, 0.16);
+}
+
+.playdate-benefits h2 {
+	color: var(--color-primary);
+}
+
+.playdate-benefit-list {
+	display: grid;
+	gap: 0.85rem;
+}
+
+.playdate-benefit-card {
+	padding: 1rem 1.1rem;
+	border: 1px solid rgba(38, 123, 104, 0.14);
+	border-radius: 1rem;
+	background: #f8fcfb;
+}
+
+.playdate-benefit-card h3,
+.playdate-program-card h3 {
+	margin-bottom: 0.3rem;
+	font-size: 1.06rem;
+}
+
+.playdate-benefit-card .playdate-richtext,
+.playdate-program-card .playdate-richtext {
+	font-size: 0.92rem;
+}
+
+/* Programs */
+.playdate-programs {
+	position: relative;
+	isolation: isolate;
+	background: var(--playdate-cream);
+}
+
+.playdate-programs::after {
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	background: rgba(255, 248, 229, 0.9);
+	content: "";
+}
+
+.playdate-programs__background {
+	opacity: 0.35;
+}
+
+.playdate-programs__layout {
+	display: grid;
+	gap: clamp(2rem, 6vw, 5rem);
+	align-items: end;
+}
+
+.playdate-program-list {
+	display: grid;
+	gap: 0.8rem;
+	margin-top: 2rem;
+}
+
+.playdate-program-card {
+	display: flex;
+	gap: 0.9rem;
+	align-items: flex-start;
+	padding: 1rem 1.1rem;
+	border: 1px solid rgba(251, 81, 71, 0.12);
+	border-radius: 1rem;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.playdate-program-card__icon {
+	width: 3rem;
+	height: 3rem;
+	object-fit: contain;
+	flex: 0 0 auto;
+}
+
+.playdate-programs__banner {
+	display: block;
+	width: 100%;
+	max-height: 42rem;
+	object-fit: cover;
+	object-position: center top;
+	border-radius: 45% 45% 1.5rem 1.5rem;
+}
+
+/* Audience and value */
+.playdate-users {
+	background: var(--color-secondary);
+	color: #fff;
+}
+
+.playdate-users h2 {
+	color: #fff;
+}
+
+.playdate-advantage {
+	background: #fff;
+}
+
+.playdate-advantage__layout {
+	display: grid;
+	gap: clamp(2rem, 6vw, 5rem);
+	align-items: center;
+}
+
+.playdate-advantage__image {
+	display: block;
+	width: 100%;
+	border-radius: 1.5rem;
+	box-shadow: 0 1.5rem 3rem rgba(50, 108, 198, 0.13);
+}
+
+/* Private playdate */
+.playdate-schedule {
+	background: var(--playdate-blue-soft);
+}
+
+.playdate-schedule__panel {
+	padding: clamp(1.5rem, 5vw, 3.5rem);
+	border: 1px solid rgba(50, 108, 198, 0.2);
+	border-radius: 1.75rem;
+	background: #fff;
+	box-shadow: 0 1rem 3rem rgba(34, 56, 80, 0.07);
+	text-align: center;
+}
+
+.playdate-schedule__gallery {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.8rem;
+	margin-block: clamp(2rem, 5vw, 3rem);
+}
+
+.playdate-schedule__image {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.playdate-schedule__ending {
+	max-width: 48rem;
+	margin: 0 auto 1.5rem;
+}
+
+/* Teachers */
+.playdate-teachers {
+	background: var(--playdate-cream);
+}
+
+.playdate-teacher-grid {
+	display: grid;
+	gap: 1.5rem;
+	max-width: 60rem;
+	margin: clamp(2rem, 5vw, 3rem) auto 0;
+}
+
+.playdate-teacher-card {
+	overflow: hidden;
+	border-radius: 1.5rem;
+	background: #fff;
+	box-shadow: 0 1rem 2.5rem rgba(77, 65, 30, 0.09);
+}
+
+.playdate-teacher-card__image {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	object-position: center top;
+}
+
+.playdate-teacher-card__body {
+	padding: 1.5rem;
+}
+
+.playdate-teacher-card h3 {
+	margin-bottom: 0.5rem;
+	color: var(--color-primary);
+	font-size: 1.35rem;
+}
+
+/* Pricing */
+.playdate-pricing {
+	position: relative;
+	isolation: isolate;
+	background: #17312b;
+	color: #fff;
+}
+
+.playdate-pricing::after {
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	background: rgba(16, 37, 32, 0.78);
+	content: "";
+}
+
+.playdate-pricing__content {
+	display: grid;
+	gap: 2rem;
+}
+
+.playdate-pricing h2 {
+	color: var(--playdate-yellow);
+}
+
+.playdate-price-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: min(100%, 34rem);
+	margin-inline: auto;
+	padding: clamp(1.5rem, 5vw, 2.5rem);
+	border-radius: 1.5rem;
+	background: #fff;
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+	color: #252b36;
+	text-align: center;
+}
+
+.playdate-price-card h3 {
+	margin-bottom: 0.75rem;
+	font-size: 1.5rem;
+}
+
+.playdate-price-card del {
+	color: #6b7280;
+}
+
+.playdate-price-card__price {
+	display: block;
+	margin-top: 0.25rem;
+	color: var(--color-primary);
+	font-family: var(--font-heading);
+	font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.playdate-price-card__label {
+	margin-top: 0.5rem;
+	padding: 0.35rem 0.65rem;
+	border-radius: 999px;
+	background: var(--playdate-yellow);
+	font-weight: 600;
+}
+
+.playdate-price-card__features {
+	margin: 1rem 0 1.5rem;
+	text-align: left;
+}
+
+@media (min-width: 40rem) {
+	.playdate-theme-grid {
+		gap: 1.25rem;
+	}
+
+	.playdate-schedule__gallery {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.playdate-teacher-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 52rem) {
+	.playdate-benefits__layout,
+	.playdate-programs__layout,
+	.playdate-advantage__layout {
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	}
+
+	.playdate-programs__layout {
+		grid-template-columns: minmax(0, 1.15fr) minmax(17rem, 0.85fr);
+	}
+
+	.playdate-advantage__layout > :first-child {
+		order: 2;
+	}
+
+	.playdate-advantage__layout > :last-child {
+		order: 1;
+	}
+
+	.playdate-schedule__gallery {
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 64rem) {
+	.playdate-theme-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 32rem) {
+	.playdate-theme-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.playdate-button {
+		width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.playdate-button,
+	.playdate-theme-card__image {
+		transition: none;
+	}
+}
