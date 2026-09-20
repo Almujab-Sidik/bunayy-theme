@@ -890,6 +890,8 @@ textarea {
 
 	.main-navigation li:hover > .sub-menu,
 	.main-navigation li:hover > .children,
+	.main-navigation li:focus-within > .sub-menu,
+	.main-navigation li:focus-within > .children,
 	.main-navigation li.focus > .sub-menu,
 	.main-navigation li.focus > .children {
 		opacity: 1;

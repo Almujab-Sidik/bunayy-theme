@@ -168,7 +168,7 @@ function bunayy_theme_scripts()
         wp_enqueue_style('bunayy-sensory-class', get_template_directory_uri() . '/css/sensory-class.css', array('bunayy-theme-style'), filemtime(get_template_directory() . '/css/sensory-class.css'));
     }
 
-    if (is_page('themed-playdate')) {
+    if (is_page(array('themed-playdate', 'enrichment-program'))) {
         wp_enqueue_style('bunayy-themed-playdate', get_template_directory_uri() . '/css/themed-playdate.css', array('bunayy-theme-style'), filemtime(get_template_directory() . '/css/themed-playdate.css'));
     }
 

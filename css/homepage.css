@@ -140,6 +140,49 @@ body.home {
 	margin: 0;
 }
 
+@media screen and (max-width: 47.99em) {
+
+	.home-hero {
+		--home-hero-image-height: clamp(18rem, 80vw, 21rem);
+
+		min-height: 0;
+	}
+
+	.home-hero__inner {
+		padding-block: clamp(2.5rem, 10vw, 3rem) calc(var(--home-hero-image-height) + 0.5rem);
+	}
+
+	.home-hero h1 {
+		font-size: clamp(2rem, 8.5vw, 2.3rem);
+		line-height: 1.18;
+		letter-spacing: -0.025em;
+	}
+
+	.home-hero__description {
+		margin-block: 1.15rem 1.4rem;
+		font-size: 0.9rem;
+		line-height: 1.6;
+	}
+
+	.home-hero .home-button {
+		min-height: 2.75rem;
+		padding: 0.7rem 1rem;
+		font-size: 0.9rem;
+	}
+
+	.home-hero__media img {
+		top: auto;
+		height: var(--home-hero-image-height);
+		object-position: center 62%;
+	}
+
+	.home-hero__media::after {
+		top: auto;
+		height: calc(var(--home-hero-image-height) + 2rem);
+		background: linear-gradient(180deg, #f8f6f4 0%, rgba(248, 246, 244, 0.78) 20%, rgba(248, 246, 244, 0) 58%);
+	}
+}
+
 .home-programs {
 	background: #fff;
 }
