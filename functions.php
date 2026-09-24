@@ -147,40 +147,6 @@ function bunayy_theme_scripts()
     wp_enqueue_style('bunayy-theme-style', get_stylesheet_uri(), array('bunayy-fonts'), filemtime(get_stylesheet_directory() . '/style.css'));
     wp_style_add_data('bunayy-theme-style', 'rtl', 'replace');
 
-    if (is_front_page()) {
-        wp_enqueue_style('bunayy-homepage', get_template_directory_uri() . '/css/homepage.css', array('bunayy-theme-style'), filemtime(get_template_directory() . '/css/homepage.css'));
-    }
-
-    if (is_page('about-bunayy')) {
-        wp_enqueue_style('bunayy-about', get_template_directory_uri() . '/css/about.css', array('bunayy-theme-style'), filemtime(get_template_directory() . '/css/about.css'));
-    }
-
-    if (is_page('educators')) {
-        wp_enqueue_style('bunayy-educators', get_template_directory_uri() . '/css/educators.css', array('bunayy-theme-style'), filemtime(get_template_directory() . '/css/educators.css'));
-    }
-
-    if (is_page('contact-us')) {
-        wp_enqueue_style('dashicons');
-        wp_enqueue_style('bunayy-contact', get_template_directory_uri() . '/css/contact.css', array('bunayy-theme-style'), filemtime(get_template_directory() . '/css/contact.css'));
-    }
-
-    if (is_page('sensory-class')) {
-        wp_enqueue_style('bunayy-sensory-class', get_template_directory_uri() . '/css/sensory-class.css', array('bunayy-theme-style'), filemtime(get_template_directory() . '/css/sensory-class.css'));
-    }
-
-    if (is_page(array('themed-playdate', 'enrichment-program'))) {
-        wp_enqueue_style('bunayy-themed-playdate', get_template_directory_uri() . '/css/themed-playdate.css', array('bunayy-theme-style'), filemtime(get_template_directory() . '/css/themed-playdate.css'));
-    }
-
-    if (is_page('product-digital')) {
-        wp_enqueue_style('bunayy-product-digital', get_template_directory_uri() . '/css/product-digital.css', array('bunayy-theme-style'), filemtime(get_template_directory() . '/css/product-digital.css'));
-    }
-
-    if (is_page('kids-event-space')) {
-        wp_enqueue_style('bunayy-kids-event', get_template_directory_uri() . '/css/kids-event-and-space.css', array('bunayy-theme-style'), filemtime(get_template_directory() . '/css/kids-event-and-space.css'));
-        wp_enqueue_script('bunayy-kids-event', get_template_directory_uri() . '/js/kids-event-and-space.js', array(), filemtime(get_template_directory() . '/js/kids-event-and-space.js'), true);
-    }
-
     wp_enqueue_script('bunayy-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), filemtime(get_template_directory() . '/js/navigation.js'), true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
